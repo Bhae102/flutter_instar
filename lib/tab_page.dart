@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:instargarm_clon/animation_page.dart';
 import 'package:instargarm_clon/home_page.dart';
 
 class TapPage extends StatefulWidget {
@@ -13,6 +14,7 @@ class _TapPageState extends State<TapPage> {
     HomePage(),
     Text('page2'),
     Text('page3'),
+    AnimationPage(),
   ];
 
   @override
@@ -24,9 +26,11 @@ class _TapPageState extends State<TapPage> {
         fixedColor: Colors.black,
         onTap: _onItemTapped,
           currentIndex: _selectedIndex,
+          type: BottomNavigationBarType.fixed,
           items: <BottomNavigationBarItem>[
         BottomNavigationBarItem(icon: Icon(Icons.home), title: Text('Home')),
         BottomNavigationBarItem(icon: Icon(Icons.search), title: Text('Search')),
+        BottomNavigationBarItem(icon: Icon(Icons.account_circle), title: Text('Account')),
         BottomNavigationBarItem(icon: Icon(Icons.account_circle), title: Text('Account')),
 
 
